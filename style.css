@@ -1,152 +1,136 @@
-/* إزالة الهوامش والحشوات الافتراضية */
+/* إعدادات عامة */
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    text-align: center;
     direction: rtl;
     background: #FAF3E0;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+    text-align: center;
 }
 
-/* تحسين الهيدر */
+/* تأثير موحد للعناصر التفاعلية */
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* الهيدر */
 header {
     background: #D4A017;
-    padding: 20px;
     color: white;
-    border-radius: 0 0 13px 13px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    border-radius: 0 0 25px 25px;
     position: relative;
-    height: 550px;
-    margin: 0; /* إزالة أي هوامش */
-    text-align: center;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-/* تحسين الشعار */
+/* الشعار */
 .church-logo {
-    max-width: 100%;
-    height: auto;
-    width: 400px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 6px solid white;
-    position: absolute;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
+    border: 12px solid white;
+    object-fit: *contain; / بدل cover */
+    background-color: white;
+    padding: 5px; /* ممكن نضيف padding لو حبيت تبعد الصورة شوية عن الإطار */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* تحسين النصوص داخل الهيدر */
+/* اسم الكنيسة */
 .church-name {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 340px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
     margin: 10px 0;
+    top: 300px;
 }
-
 .priest-container {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: bold;
-    background: rgba(255, 255, 255, 0.5);
-    color: black;
-    padding: 10px 20px;
-    border-radius: 15px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-/* تحسين الأقسام */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* تحسين الأزرار */
-button {
-    background-color: #D4A017; /* اللون الأصلي */
+    background: rgba(255, 255, 255, 0.2);
     color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 25px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 50px;
 }
 
-button:hover {
-    background-color: #E6B800; /* اللون عند التمرير */
-    transform: scale(1.05);
-}
-
-button:active {
-    background-color: #C69700; /* اللون عند الضغط */
-    transform: scale(0.95);
-}
-
-/* تحسين الأزرار في الأعلى */
+/* أزرار التنقل */
 #top-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    background-color: #fff8e6;
+    padding: 15px 10px;
+    border-bottom: 2px solid #f1da98;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 #top-buttons button {
-    margin: 0 10px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    background-color: #D4A017; /* اللون الأصلي */
+    background-color: #D4A017;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 #top-buttons button:hover {
-    background-color: #E6B800; /* اللون عند التمرير */
+    background-color: #E6B800;
+    transform: translateY(-2px);
 }
 
-/* تحسين الجداول */
-table {
+#top-buttons button:active,
+#top-buttons button:focus {
+    background-color: #C69700;
+    transform: scale(0.97);
+    outline: none;
+}
+
+/* الأقسام */
+section {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
     width: 90%;
-    margin: 25px auto;
-    border-collapse: collapse;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+/* الجداول */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
 }
 
 th, td {
     border: 1px solid #D4A017;
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
 }
 
 th {
-    background: #D4A017;
+    background-color: #D4A017;
     color: white;
 }
 
 td {
-    background: #f9f9f9;
+    background-color: #fdf9ed;
 }
 
-/* تحسين الروابط */
+/* الروابط */
 a {
     color: #D4A017;
     font-weight: bold;
@@ -157,35 +141,25 @@ a:hover {
     text-decoration: underline;
 }
 
-/* تحسين الإطارات */
-iframe {
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* تحسين الفيديوهات */
+/* الفيديو */
 #video-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#live-video {
-    margin-bottom: 20px;
-}
-
 #latest-videos {
     width: 100%;
     max-width: 600px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff8e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 #latest-videos h3 {
-    text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
 }
 
 .video {
@@ -194,18 +168,24 @@ iframe {
 
 .video iframe {
     width: 100%;
-    height: 200px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 220px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .video p {
     font-size: 14px;
-    text-align: center;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
-/* تحسين القوائم */
+/* الإطارات */
+iframe {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* القوائم */
 ul {
     list-style: none;
     padding: 0;
@@ -213,14 +193,69 @@ ul {
 
 ul li {
     margin: 10px 0;
+    font-size: 1rem;
 }
 
-/* Media Queries */
+/* الأزرار */
+button {
+    background-color: #D4A017;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E6B800;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #C69700;
+    transform: scale(0.95);
+}
+
+/* استجابة للموبايل */
 @media (max-width: 768px) {
-    .church-name {
-        font-size: 1.2rem;
+    header {
+        min-height: 450px;
+        padding-bottom: 80px;
     }
 
+    .church-logo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .church-name {
+        font-size: 1.4rem;
+    }
+
+    .priest-container {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    #top-buttons button {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 16px;
+    }
+
+    .video iframe {
+        height: 180px;
+    }
+}
     #top-buttons button {
         font-size: 0.9rem;
         padding: 8px 12px;
