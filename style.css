@@ -218,7 +218,21 @@ ul li {
 /* Media Queries */
 @media (max-width: 768px) {
     .church-name {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* تصغير حجم النص */
+        margin-bottom: 10px; /* إضافة مسافة بين النصوص */
+    }
+
+    .priest-container {
+        font-size: 1rem; /* تصغير حجم النص */
+        padding: 5px 10px; /* تقليل الحشوات */
+        position: static; /* إزالة الوضع المطلق */
+        transform: none; /* إزالة التحويل */
+        margin-top: 10px; /* إضافة مسافة أعلى */
+    }
+
+    header {
+        height: auto; /* السماح بارتفاع تلقائي */
+        padding-bottom: 20px; /* إضافة حشوة أسفل الهيدر */
     }
 
     #top-buttons button {
@@ -226,7 +240,6 @@ ul li {
         padding: 8px 12px;
     }
 }
-
 .video p {
     font-size: 14px;
     text-align: center;
