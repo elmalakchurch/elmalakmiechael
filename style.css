@@ -7,21 +7,25 @@ html, body {
     direction: rtl;
     background: #FAF3E0;
     color: #333;
+    line-height: 1.6;
 }
 
 /* تحسين الهيدر */
 header {
     background: #D4A017;
-    padding: 0;
+    padding: 20px;
     color: white;
     border-radius: 0 0 13px 13px;
     position: relative;
     height: 550px;
     margin: 0; /* إزالة أي هوامش */
+    text-align: center;
 }
 
 /* تحسين الشعار */
 .church-logo {
+    max-width: 100%;
+    height: auto;
     width: 400px;
     height: 300px;
     border-radius: 50%;
@@ -34,7 +38,7 @@ header {
 
 /* تحسين النصوص داخل الهيدر */
 .church-name {
-    font-size: 36px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
     position: absolute;
@@ -42,6 +46,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    margin: 10px 0;
 }
 
 .priest-container {
@@ -66,11 +71,12 @@ section {
     background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* تحسين الأزرار */
 button {
-    background-color: #D4A017;
+    background-color: #D4A017; /* اللون الأصلي */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -82,19 +88,21 @@ button {
 }
 
 button:hover {
-    background-color: #E6B800;
+    background-color: #E6B800; /* اللون عند التمرير */
     transform: scale(1.05);
 }
 
 button:active {
-    background-color: #C69700;
+    background-color: #C69700; /* اللون عند الضغط */
     transform: scale(0.95);
 }
 
 /* تحسين الأزرار في الأعلى */
 #top-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
     background-color: #f9f9f9;
     padding: 10px;
     border-bottom: 1px solid #ccc;
@@ -102,9 +110,9 @@ button:active {
 
 #top-buttons button {
     margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #D4A017;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #D4A017; /* اللون الأصلي */
     color: white;
     border: none;
     border-radius: 5px;
@@ -112,7 +120,7 @@ button:active {
 }
 
 #top-buttons button:hover {
-    background-color: #E6B800;
+    background-color: #E6B800; /* اللون عند التمرير */
 }
 
 /* تحسين الجداول */
@@ -189,6 +197,34 @@ iframe {
     height: 200px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* تحسين القوائم */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .church-name {
+        font-size: 1.2rem;
+    }
+
+    #top-buttons button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
 }
 
 .video p {
