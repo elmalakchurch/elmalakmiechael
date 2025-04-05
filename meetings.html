@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواعيد الاجتماعات - كنيسة الملاك ميخائيل والأنبا كاراس</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- أزرار التحكم -->
+    <div id="top-buttons">
+        <button onclick="navigateTo('index.html')">الصفحة الرئيسية</button>
+        <button onclick="navigateTo('masses.html')">مواعيد القداسات</button>
+        <button onclick="navigateTo('stream.html')">البث المباشر</button>
+        <button onclick="navigateTo('pages.html')">طرق التواصل</button>
+    </div>
+
+    <header>
+        <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
+        <h1 class="church-name">كنيسة الملاك ميخائيل والأنبا كاراس والقديس يوليوس الأقفهصي - أرض الفولي - الإسكندرية</h1>
+        <div class="priest-container">تحت رعاية أبونا/ لوكاس جرجس</div>
+    </header>
+
+    <section id="meetings">
+        <h2>مواعيد الاجتماعات</h2>
+        <table>
+            <tr><th>الفئة</th><th>اليوم</th><th>التوقيت</th></tr>
+            <tr><td>ابتدائي</td><td>الجمعة</td><td>10:30 - 1:00 ظهرًا</td></tr>
+            <tr><td>إعدادي بنات</td><td>الجمعة</td><td>3:00 - 5:00 عصرًا</td></tr>
+            <tr><td>ثانوي بنات</td><td>الجمعة</td><td>3:00 - 5:00 عصرًا</td></tr>
+            <tr><td>إعدادي بنين</td><td>الجمعة</td><td>5:00 - 7:00 مساءً</td></tr>
+            <tr><td>ثانوي بنين</td><td>الجمعة</td><td>5:00 - 7:00 مساءً</td></tr>
+            <tr><td>شباب</td><td>الجمعة</td><td>7:00 - 9:00 مساءً</td></tr>
+            <tr><td>اجتماع السيدات</td><td>الثلاثاء</td><td>6:30 - 8:30 مساءً</td></tr>
+            <tr><td>اجتماع الرجال</td><td>الأحد</td><td>7:00 - 9:00 مساءً</td></tr>
+            <tr><td>بيوت فرحانة</td><td>الخميس (أول كل شهر)</td><td>6:30 - 9:00 مساءً</td></tr>
+        </table>
+    </section>
+
+    <script>
+        // التنقل بين الصفحات
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

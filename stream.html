@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البث المباشر - كنيسة الملاك ميخائيل والأنبا كاراس</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- أزرار التحكم -->
+    <div id="top-buttons">
+        <button onclick="navigateTo('index.html')">الصفحة الرئيسية</button>
+        <button onclick="navigateTo('masses.html')">مواعيد القداسات</button>
+        <button onclick="navigateTo('meetings.html')">مواعيد الاجتماعات</button>
+        <button onclick="navigateTo('pages.html')">طرق التواصل</button>
+    </div>
+
+    <!-- إشعار -->
+    <div id="notification" style="display: none;">
+        <p>يوجد بث مباشر الآن! <a href="stream.html">شاهد الآن</a></p>
+    </div>
+
+    <header>
+        <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
+        <h1 class="church-name">كنيسة الملاك ميخائيل والأنبا كاراس والقديس يوليوس الأقفهصي - أرض الفولي - الإسكندرية</h1>
+        <div class="priest-container">تحت رعاية أبونا/ لوكاس جرجس</div>
+    </header>
+
+    <section id="live-stream">
+        <h2>البث المباشر</h2>
+        <div id="video-container">
+            <div id="live-video">
+                <!-- سيتم عرض البث المباشر هنا -->
+            </div>
+            <div id="latest-videos">
+                <h3>آخر 4 بث مباشر في القناة</h3>
+                <!-- سيتم عرض آخر 4 فيديوهات هنا -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // التنقل بين الصفحات
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        // جلب الفيديوهات من YouTube API
+        const API_KEY = "AIzaSyCF3MVA6S-mOvlFSkAIFaIBCMrTvEEi8gE"; // مفتاح API الخاص بك
+        const CHANNEL_ID = "UCSmBMMAW7LmDKmW9BParx1A";
+
+        async function fetchVideos() {
+            const liveStreamUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&key=${API_KEY}`;
+            const latestVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&order=date&type=video&maxResults=4&key=${API_KEY}`;
+
+            try {
+                const liveResponse = await fetch(liveStreamUrl);
+                const liveData = await liveResponse.json();
+
+                const liveVideoContainer = document.getElementById("live-video");
+                const latestVideosContainer = document.getElementById("latest-videos");
+
+                if (liveData.items && liveData.items.length > 0) {
+                    const liveVideoId = liveData.items[0].id.videoId;
+                    liveVideoContainer.innerHTML = `
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/${liveVideoId}"
+                            title="البث المباشر"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    `;
+                    latestVideosContainer.style.display = "none";
+                    // إظهار الإشعار عند وجود بث مباشر
+                    document.getElementById('notification').style.display = 'block';
+                } else {
+                    const latestResponse = await fetch(latestVideosUrl);
+                    const latestData = await latestResponse.json();
+
+                    latestVideosContainer.innerHTML += latestData.items
+                        .map(
+                            (video) => `
+                            <div class="video">
+                                <iframe
+                                    src="https://www.youtube.com/embed/${video.id.videoId}"
+                                    title="${video.snippet.title}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                                <p>${video.snippet.title}</p>
+                            </div>
+                            `
+                        )
+                        .join("");
+                }
+            } catch (error) {
+                console.error("حدث خطأ أثناء جلب الفيديوهات:", error);
+            }
+        }
+
+        // استدعاء الدالة عند تحميل الصفحة
+        fetchVideos();
+    </script>
+</body>
+</html>

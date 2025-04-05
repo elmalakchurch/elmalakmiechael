@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طرق التواصل - كنيسة الملاك ميخائيل والأنبا كاراس</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- أزرار التحكم -->
+    <div id="top-buttons">
+        <button onclick="navigateTo('index.html')">الصفحة الرئيسية</button>
+        <button onclick="navigateTo('masses.html')">مواعيد القداسات</button>
+        <button onclick="navigateTo('stream.html')">البث المباشر</button>
+        <button onclick="navigateTo('pages.html')">طرق التواصل</button>
+    </div>
+
+    <header>
+        <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
+        <h1 class="church-name">كنيسة الملاك ميخائيل والأنبا كاراس والقديس يوليوس الأقفهصي - أرض الفولي - الإسكندرية</h1>
+        <div class="priest-container">تحت رعاية أبونا/ لوكاس جرجس</div>
+    </header>
+
+    <section id="contact">
+        <h2>طرق التواصل</h2>
+        <p><a href="https://maps.app.goo.gl/me7h9E4Ro57WdMEGA" target="_blank">🔍 موقع الكنيسة على Google Maps</a></p>
+        <p><a href="https://www.youtube.com/channel/UCSmBMMAW7LmDKmW9BParx1A" target="_blank">📺 قناة اليوتيوب</a></p>
+        <p><a href="https://www.facebook.com/share/1XBk9BEmAN/" target="_blank">📘 صفحة الفيسبوك</a></p>
+    </section>
+
+    <script>
+        // التنقل بين الصفحات
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

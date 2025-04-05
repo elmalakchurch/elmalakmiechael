@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كنيسة الملاك ميخائيل والأنبا كاراس - أرض الفولي - الإسكندرية</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description" content="الموقع الرسمي لكنيسة الملاك ميخائيل والأنبا كاراس - أرض الفولي - الإسكندرية. مواعيد القداسات والاجتماعات وطرق التواصل." />
+    <meta name="keywords" content="كنيسة, الملاك ميخائيل, الأنبا كاراس, أرض الفولي, الإسكندرية, قداسات, اجتماعات, أبونا لوكاس جرجس" />
+    <meta name="author" content="Barsome Moimen , Karas Rafeek" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- أزرار التحكم -->
+    <div id="top-buttons">
+        <button onclick="navigateTo('index.html')">الصفحة الرئيسية</button>
+        <button onclick="navigateTo('masses.html')">مواعيد القداسات</button>
+        <button onclick="navigateTo('meetings.html')">مواعيد الاجتماعات</button>
+        <button onclick="navigateTo('stream.html')">البث المباشر</button>
+        <button onclick="navigateTo('pages.html')">طرق التواصل</button>
+    </div>
+
+    <header>
+        <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
+        <h1 class="church-name">كنيسة الملاك ميخائيل والأنبا كاراس والقديس يوليوس الأقفهصي - أرض الفولي - الإسكندرية</h1>
+        <div class="priest-container">تحت رعاية أبونا/ لوكاس جرجس</div>
+    </header>
+
+    <!-- رسالة الترحيب -->
+    <section id="welcome-message">
+        <h2>لأَنَّ بَيْتِي بَيْتَ الصَّلاَةِ يُدْعَى لِكُلِّ الشُّعُوبِ ( إشعياء ٥٦ : ٧ )</h2>
+    </section>
+
+    <!-- قسم التعليمات -->
+    <section id="instructions">
+        <h2>التعليمات</h2>
+        <ul>
+            <li>يرجى الالتزام بمواعيد القداسات والاجتماعات.</li>
+            <li>للتواصل مع الكنيسة، يمكنكم زيارة صفحة <a href="pages.html">طرق التواصل</a>.</li>
+            <li>تابعوا البث المباشر للقداسات والاجتماعات من خلال صفحة <a href="stream.html">البث المباشر</a>.</li>
+        </ul>
+    </section>
+
+    <script>
+        // التنقل بين الصفحات
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
