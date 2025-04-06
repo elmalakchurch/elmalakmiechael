@@ -99,9 +99,8 @@ button:active {
 
 /* تحسين الأزرار في الأعلى */
 #top-buttons {
-    display: flex;
-    flex-wrap: wrap; /* السماح بانتقال الأزرار إلى سطر جديد عند الحاجة */
-    justify-content: center; /* توسيط الأزرار */
+    display: grid; /* استخدام Grid لتوزيع الأزرار */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* توزيع الأزرار في أعمدة */
     gap: 10px; /* مسافة بين الأزرار */
     background-color: #f9f9f9;
     padding: 10px;
@@ -109,17 +108,16 @@ button:active {
 }
 
 #top-buttons button {
-    flex: 1 1 calc(20% - 20px); /* توزيع الأزرار بالتساوي */
-    max-width: 200px; /* الحد الأقصى لعرض الزر */
-    padding: 10px 15px; /* حشوات داخلية */
-    font-size: 1rem; /* حجم النص */
     background-color: #D4A017; /* لون خلفية الزر */
     color: white; /* لون النص */
     border: none; /* إزالة الحدود */
-    border-radius: 5px; /* زوايا مستديرة */
+    padding: 20px; /* حشوات داخلية */
+    font-size: 1rem; /* حجم النص */
+    border-radius: 10px; /* زوايا مستديرة */
     cursor: pointer; /* مؤشر الفأرة */
     text-align: center; /* توسيط النصوص داخل الزر */
     transition: all 0.3s ease; /* تأثير عند التمرير */
+    height: 100px; /* جعل الأزرار مربعة */
 }
 
 #top-buttons button:hover {
@@ -254,11 +252,14 @@ ul li {
         padding: 8px 20px;
     }
 
+    #top-buttons {
+        grid-template-columns: repeat(2, 1fr); /* عرض الأزرار في عمودين على الهواتف */
+    }
+
     #top-buttons button {
-        flex: 1 1 100%; /* جعل الأزرار تأخذ العرض الكامل */
-        max-width: none; /* إزالة الحد الأقصى للعرض */
         font-size: 0.9rem; /* تصغير حجم النص */
-        padding: 10px; /* تقليل الحشوات */
+        padding: 15px; /* تقليل الحشوات */
+        height: auto; /* السماح بارتفاع تلقائي */
     }
 
     section {
