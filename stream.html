@@ -16,17 +16,14 @@
         <button onclick="navigateTo('pages.html')">طرق التواصل</button>
     </div>
 
-    <!-- إشعار -->
-    <div id="notification" style="display: none;">
-        <p>يوجد بث مباشر الآن! <a href="stream.html">شاهد الآن</a></p>
-    </div>
-
+    <!-- الهيدر -->
     <header>
         <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
         <h1 class="church-name">كنيسة الملاك ميخائيل والأنبا كاراس والقديس يوليوس الأقفهصي - أرض الفولي - الإسكندرية</h1>
         <div class="priest-container">تحت رعاية أبونا/ لوكاس جرجس</div>
     </header>
 
+    <!-- قسم البث المباشر -->
     <section id="live-stream">
         <h2>البث المباشر</h2>
         <div id="video-container">
@@ -64,7 +61,7 @@
                 if (liveData.items && liveData.items.length > 0) {
                     const liveVideoId = liveData.items[0].id.videoId;
                     liveVideoContainer.innerHTML = `
-                        <iframe width="560" height="315"
+                        <iframe
                             src="https://www.youtube.com/embed/${liveVideoId}"
                             title="البث المباشر"
                             frameborder="0"
@@ -73,9 +70,11 @@
                         </iframe>
                     `;
                     latestVideosContainer.style.display = "none";
-                    // إظهار الإشعار عند وجود بث مباشر
-                    document.getElementById('notification').style.display = 'block';
                 } else {
+                    liveVideoContainer.innerHTML = `
+                        <p>لا يوجد بث مباشر حاليًا. يرجى متابعة الفيديوهات الأخيرة أدناه.</p>
+                    `;
+
                     const latestResponse = await fetch(latestVideosUrl);
                     const latestData = await latestResponse.json();
 
@@ -98,6 +97,9 @@
                 }
             } catch (error) {
                 console.error("حدث خطأ أثناء جلب الفيديوهات:", error);
+                document.getElementById("live-video").innerHTML = `
+                    <p>حدث خطأ أثناء تحميل البث المباشر. يرجى المحاولة لاحقًا.</p>
+                `;
             }
         }
 
