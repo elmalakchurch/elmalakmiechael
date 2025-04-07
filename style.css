@@ -17,7 +17,7 @@ header {
     color: white;
     border-radius: 0 0 13px 13px;
     position: relative;
-    height: 550px;
+    height: 580px;
     margin: 0;
     text-align: center;
 }
@@ -27,7 +27,7 @@ header {
     max-width: 100%;
     height: auto;
     width: 400px;
-    height: 300px;
+    height: 400px;
     border-radius: 50%;
     border: 6px solid white;
     position: absolute;
@@ -42,7 +42,7 @@ header {
     font-weight: bold;
     color: white;
     position: absolute;
-    top: 340px;
+    top: 450px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
