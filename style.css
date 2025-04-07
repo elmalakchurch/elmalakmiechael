@@ -18,7 +18,7 @@ header {
     border-radius: 0 0 13px 13px;
     position: relative;
     height: 550px;
-    margin: 0; /* إزالة أي هوامش */
+    margin: 0;
     text-align: center;
 }
 
@@ -74,27 +74,86 @@ section {
     text-align: center;
 }
 
-/* تحسين الأزرار */
-button {
-    background-color: #D4A017; /* اللون الأصلي */
+/* القائمة المخفية */
+#menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #D4A017;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
     border-radius: 5px;
-    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+#side-menu.active {
+    right: 0;
+}
+
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#side-menu ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#side-menu ul li a:hover {
+    color: #FFD700;
+}
+
+/* تحسين الأزرار */
+button {
+    background: linear-gradient(135deg, #FFD700, #FFA500); /* تدرج لوني */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 12px; /* زوايا مستديرة */
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    background-color: #E6B800; /* اللون عند التمرير */
-    transform: scale(1.05);
+    transform: translateY(-5px); /* تحريك الزر للأعلى عند التمرير */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل */
 }
 
 button:active {
-    background-color: #C69700; /* اللون عند الضغط */
-    transform: scale(0.95);
+    transform: translateY(2px); /* تحريك الزر للأسفل عند الضغط */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* تقليل الظل */
 }
 
 /* تحسين الأزرار في الأعلى */
@@ -252,6 +311,14 @@ ul li {
         padding: 8px 20px;
     }
 
+    #side-menu {
+        width: 200px; /* تصغير القائمة على الهواتف */
+    }
+
+    #side-menu ul li a {
+        font-size: 16px; /* تصغير حجم النص */
+    }
+
     #top-buttons {
         grid-template-columns: repeat(2, 1fr); /* عرض الأزرار في عمودين على الهواتف */
     }
@@ -286,10 +353,5 @@ ul li {
 
     .video iframe {
         height: 180px;
-    }
-}
-    #top-buttons button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
     }
 }
