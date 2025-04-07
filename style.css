@@ -354,4 +354,29 @@ ul li {
     .video iframe {
         height: 180px;
     }
+
+    /* تحسين الهيدر على الهواتف */
+    header {
+        height: auto; /* السماح بارتفاع تلقائي */
+        padding-bottom: 20px; /* تقليل الحشوات السفلية */
+    }
+
+    .church-logo {
+        width: 150px; /* تصغير حجم الشعار */
+        height: 150px;
+        top: 10px; /* تقليل المسافة من الأعلى */
+    }
+
+    .church-name {
+        font-size: 1.2rem; /* تصغير حجم النص */
+        top: 180px; /* تعديل الموضع */
+        line-height: 1.5; /* تحسين المسافة بين الأسطر */
+        padding: 0 10px; /* إضافة حشوات جانبية */
+    }
+
+    .priest-container {
+        font-size: 0.9rem; /* تصغير حجم النص */
+        padding: 8px 15px; /* تقليل الحشوات */
+        margin-top: 10px; /* إضافة مسافة بين النصوص */
+    }
 }
