@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- أزرار التحكم -->
-    <div id="top-buttons">
-        <button onclick="navigateTo('index.html')">الصفحة الرئيسية</button>
-        <button onclick="navigateTo('masses.html')">مواعيد القداسات</button>
-        <button onclick="navigateTo('stream.html')">البث المباشر</button>
-        <button onclick="navigateTo('meetings.html')">مواعيد الاجتماعات</button>
-    </div>
+    <!-- زر القائمة -->
+    <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- القائمة المخفية -->
+    <nav id="side-menu">
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="masses.html">مواعيد القداسات</a></li>
+            <li><a href="stream.html">البث المباشر</a></li>
+            <li><a href="pages.html">طرق التواصل</a></li>
+        </ul>
+    </nav>
 
     <header>
         <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
@@ -30,9 +35,10 @@
     </section>
 
     <script>
-        // التنقل بين الصفحات
-        function navigateTo(page) {
-            window.location.href = page;
+        // إظهار وإخفاء القائمة
+        function toggleMenu() {
+            const menu = document.getElementById("side-menu");
+            menu.classList.toggle("active");
         }
     </script>
 </body>
