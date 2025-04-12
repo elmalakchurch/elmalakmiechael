@@ -1,34 +1,62 @@
 <!DOCTYPE html>
+
 <html lang="ar">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>مواعيد الاجتماعات - كنيسة الملاك ميخائيل والأنبا كاراس</title>
+
     <link rel="icon" type="image/png" href="logo.png">
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
     <!-- زر القائمة -->
+
     <div id="menu-toggle" onclick="toggleMenu()">☰</div>
 
+
+
     <!-- القائمة المخفية -->
+
     <nav id="side-menu">
+
         <ul>
+
             <li><a href="index.html">الصفحة الرئيسية</a></li>
+
             <li><a href="masses.html">مواعيد أسبوع الآلام</a></li> 
+
             <li><a href="meetings.html">مواعيد الاجتماعات</a></li>
+
             <li><a href="stream.html">البث المباشر</a></li>
+
             <li><a href="pages.html">طرق التواصل</a></li>
+
     </nav>
 
+
+
     <header>
+
         <img src="logo.png" alt="شعار الكنيسة" class="church-logo">
+
         <h1 class="church-name">كنيسة الملاك ميخائيل والأنبا كاراس والقديس يوليوس الأقفهصي - أرض الفولي - الإسكندرية</h1>
+
         <div class="priest-container">تحت رعاية أبونا/ لوكاس جرجس</div>
+
     </header>
 
-    <section id="masses">
-        <h2>مواعيد الكنيسة في أسبوع الآلام</h2>
+<section id="masses">
+    <h2>مواعيد الكنيسة في أسبوع الآلام</h2>
+    <div class="responsive-table">
         <table border="1" dir="rtl">
             <thead>
                 <tr>
@@ -43,168 +71,46 @@
             <tbody>
                 <tr><td data-label="التاريخ">4/11</td><td data-label="اليوم">جمعة ختام الصوم</td><td data-label="من">7.30 ص</td><td data-label="إلى">11.30 ص</td><td data-label="العظة">النصيحة الغاشة</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
                 <tr><td data-label="التاريخ">4/12</td><td data-label="اليوم">سبت لعازر</td><td data-label="من">7 ص</td><td data-label="إلى">9 ص</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
-                <tr>
-                    <td data-label="التاريخ">4/12</td>
-                    <td data-label="اليوم">عشية أحد الشعانين<br>(السبت ليلاً)</td>
-                    <td data-label="من">6 م</td>
-                    <td data-label="إلى">8 م</td>
-                    <td data-label="العظة">اضطرب وانزعج</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/13</td>
-                    <td data-label="اليوم">أحد الشعانين</td>
-                    <td data-label="من">7.30 ص</td>
-                    <td data-label="إلى">12.30 م</td>
-                    <td data-label="العظة">لماذا اضطربوا</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/13</td>
-                    <td data-label="اليوم">أحد البصخة ليلاً</td>
-                    <td data-label="من">6 م</td>
-                    <td data-label="إلى">9 م</td>
-                    <td data-label="العظة">مذبوح لأجلك</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/14</td>
-                    <td data-label="اليوم">اثنين البصخة الصباحية</td>
-                    <td data-label="من">7.15 ص</td>
-                    <td data-label="إلى">8.15 ص</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/14</td>
-                    <td data-label="اليوم">اثنين البصخة نهارية</td>
-                    <td data-label="من">11 ص</td>
-                    <td data-label="إلى">2 ظ</td>
-                    <td data-label="العظة">شجرة التين</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/14</td>
-                    <td data-label="اليوم">اثنين البصخة ليلاً</td>
-                    <td data-label="من">6 م</td>
-                    <td data-label="إلى">9 م</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/15</td>
-                    <td data-label="اليوم">ثلاثاء البصخة الصباحية</td>
-                    <td data-label="من">7.15 ص</td>
-                    <td data-label="إلى">8.15 ص</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/15</td>
-                    <td data-label="اليوم">ثلاثاء البصخة نهارية</td>
-                    <td data-label="من">11 ص</td>
-                    <td data-label="إلى">2 ظ</td>
-                    <td data-label="العظة">خطورة الفصيلة الواحدة</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/15</td>
-                    <td data-label="اليوم">ثلاثاء البصخة ليلاً</td>
-                    <td data-label="من">6 م</td>
-                    <td data-label="إلى">9 م</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/16</td>
-                    <td data-label="اليوم">أربعاء البصخة الصباحية</td>
-                    <td data-label="من">7.15 ص</td>
-                    <td data-label="إلى">8.15 ص</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/16</td>
-                    <td data-label="اليوم">أربعاء البصخة نهارية</td>
-                    <td data-label="من">10.30 ص</td>
-                    <td data-label="إلى">1 ظ</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/16</td>
-                    <td data-label="اليوم">أربعاء البصخة ليلاً</td>
-                    <td data-label="من">5.30 م</td>
-                    <td data-label="إلى">9 م</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">نيافة الأنبا هرمينا أسقف قطاع شرق</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/17</td>
-                    <td data-label="اليوم">خميس العهد</td>
-                    <td data-label="من">6.30 ص</td>
-                    <td data-label="إلى">2 م</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/17</td>
-                    <td data-label="اليوم">خميس البصخة ليلاً</td>
-                    <td data-label="من">6 م</td>
-                    <td data-label="إلى">9 م</td>
-                    <td data-label="العظة">تعليم وعهود في سر الإفخارستيا</td>
-                    <td data-label="المتكلم">د/ سمير صدقي</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/18</td>
-                    <td data-label="اليوم">الجمعة العظيمة</td>
-                    <td data-label="من">7 ص</td>
-                    <td data-label="إلى">6 م</td>
-                    <td data-label="العظة">فتح جنبه</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/19</td>
-                    <td data-label="اليوم">سبت أبو غلمسيس</td>
-                    <td data-label="من">6 ص</td>
-                    <td data-label="إلى">11 ص</td>
-                    <td data-label="العظة">ــــــ</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/19</td>
-                    <td data-label="اليوم">قداس عيد القيامة</td>
-                    <td data-label="من">7 م</td>
-                    <td data-label="إلى">12.30 ص</td>
-                    <td data-label="العظة">أخرستوس أنيستي</td>
-                    <td data-label="المتكلم">أبونا لوكاس جرجس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/21</td>
-                    <td data-label="اليوم">الاثنين شم النسيم</td>
-                    <td data-label="من">6 ص</td>
-                    <td data-label="إلى">9 ص</td>
-                    <td data-label="العظة">قداس شم النسيم</td>
-                    <td data-label="المتكلم">قداس</td>
-                </tr>
-                <tr>
-                    <td data-label="التاريخ">4/23</td>
-                    <td data-label="اليوم">الأربعاء</td>
-                    <td data-label="من">6.30 ص</td>
-                    <td data-label="إلى">9 ص</td>
-                    <td data-label="العظة">قداس</td>
-                    <td data-label="المتكلم">قداس</td>
-                </tr>
+                <tr><td data-label="التاريخ">4/12</td><td data-label="اليوم">عشية أحد الشعانين<br>(السبت ليلاً)</td><td data-label="من">6 م</td><td data-label="إلى">8 م</td><td data-label="العظة">اضطرب وانزعج</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/13</td><td data-label="اليوم">أحد الشعانين</td><td data-label="من">7.30 ص</td><td data-label="إلى">12.30 م</td><td data-label="العظة">لماذا اضطربوا</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/13</td><td data-label="اليوم">أحد البصخة ليلاً</td><td data-label="من">6 م</td><td data-label="إلى">9 م</td><td data-label="العظة">مذبوح لأجلك</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/14</td><td data-label="اليوم">اثنين البصخة الصباحية</td><td data-label="من">7.15 ص</td><td data-label="إلى">8.15 ص</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/14</td><td data-label="اليوم">اثنين البصخة نهارية</td><td data-label="من">11 ص</td><td data-label="إلى">2 ظ</td><td data-label="العظة">شجرة التين</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/14</td><td data-label="اليوم">اثنين البصخة ليلاً</td><td data-label="من">6 م</td><td data-label="إلى">9 م</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/15</td><td data-label="اليوم">ثلاثاء البصخة الصباحية</td><td data-label="من">7.15 ص</td><td data-label="إلى">8.15 ص</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/15</td><td data-label="اليوم">ثلاثاء البصخة نهارية</td><td data-label="من">11 ص</td><td data-label="إلى">2 ظ</td><td data-label="العظة">خطورة الفصيلة الواحدة</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/15</td><td data-label="اليوم">ثلاثاء البصخة ليلاً</td><td data-label="من">6 م</td><td data-label="إلى">9 م</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/16</td><td data-label="اليوم">أربعاء البصخة الصباحية</td><td data-label="من">7.15 ص</td><td data-label="إلى">8.15 ص</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/16</td><td data-label="اليوم">أربعاء البصخة نهارية</td><td data-label="من">10.30 ص</td><td data-label="إلى">1 ظ</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/16</td><td data-label="اليوم">أربعاء البصخة ليلاً</td><td data-label="من">5.30 م</td><td data-label="إلى">9 م</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">نيافة الأنبا هرمينا أسقف قطاع شرق</td></tr>
+                <tr><td data-label="التاريخ">4/17</td><td data-label="اليوم">خميس العهد</td><td data-label="من">6.30 ص</td><td data-label="إلى">2 م</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/17</td><td data-label="اليوم">خميس البصخة ليلاً</td><td data-label="من">6 م</td><td data-label="إلى">9 م</td><td data-label="العظة">تعليم وعهود في سر الإفخارستيا</td><td data-label="المتكلم">د/ سمير صدقي</td></tr>
+                <tr><td data-label="التاريخ">4/18</td><td data-label="اليوم">الجمعة العظيمة</td><td data-label="من">7 ص</td><td data-label="إلى">6 م</td><td data-label="العظة">فتح جنبه</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/19</td><td data-label="اليوم">سبت أبو غلمسيس</td><td data-label="من">6 ص</td><td data-label="إلى">11 ص</td><td data-label="العظة">ــــــ</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/19</td><td data-label="اليوم">قداس عيد القيامة</td><td data-label="من">7 م</td><td data-label="إلى">12.30 ص</td><td data-label="العظة">أخرستوس أنيستي</td><td data-label="المتكلم">أبونا لوكاس جرجس</td></tr>
+                <tr><td data-label="التاريخ">4/21</td><td data-label="اليوم">الاثنين شم النسيم</td><td data-label="من">6 ص</td><td data-label="إلى">9 ص</td><td data-label="العظة">قداس شم النسيم</td><td data-label="المتكلم">قداس</td></tr>
+                <tr><td data-label="التاريخ">4/23</td><td data-label="اليوم">الأربعاء</td><td data-label="من">6.30 ص</td><td data-label="إلى">9 ص</td><td data-label="العظة">قداس</td><td data-label="المتكلم">قداس</td></tr>
             </tbody>
         </table>
-    </section>
+    </div>
+</section>
+
+
 
     <script>
+
         // إظهار وإخفاء القائمة
+
         function toggleMenu() {
+
             const menu = document.getElementById("side-menu");
+
             menu.classList.toggle("active");
+
         }
+
     </script>
+
 </body>
-</html>
+
+                                                                                                                                                                                                          </html>
