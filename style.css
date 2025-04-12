@@ -17,8 +17,6 @@ header {
     color: white;
     border-radius: 0 0 13px 13px;
     position: relative;
-    height: 580px;
-    margin: 0;
     text-align: center;
 }
 
@@ -26,14 +24,10 @@ header {
 .church-logo {
     max-width: 100%;
     height: auto;
-    width: 400px;
-    height: 400px;
+    width: 200px;
     border-radius: 50%;
     border: 6px solid white;
-    position: absolute;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
+    margin: 20px auto;
 }
 
 /* تحسين النصوص داخل الهيدر */
@@ -41,26 +35,18 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    position: absolute;
-    top: 450px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
     margin: 10px 0;
 }
 
 .priest-container {
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: bold;
     background: rgba(255, 255, 255, 0.5);
     color: black;
     padding: 10px 20px;
     border-radius: 15px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 /* تحسين الأقسام */
@@ -154,34 +140,41 @@ table td {
     font-size: 14px;
 }
 
-/* تحسين الروابط */
-a {
-    color: #D4A017;
-    font-weight: bold;
-    text-decoration: none;
+/* تحسين الصور */
+.church-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* تحسين استجابة الجداول على الهواتف */
+/* تحسين الصورة على الشاشات الصغيرة */
 @media (max-width: 768px) {
-    table th, table td {
-        font-size: 12px;
-        padding: 6px;
-    }
-
     .church-logo {
         width: 150px;
-        height: 150px;
-        top: 10px;
     }
 
     .church-name {
         font-size: 1.2rem;
-        top: 180px;
     }
+
+    .priest-container {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .church-image {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
 
     .priest-container {
         font-size: 0.9rem;
