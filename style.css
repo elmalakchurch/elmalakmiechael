@@ -389,35 +389,27 @@ ul li {
     }
 
     table th, table td {
-        display: block;
-        width: 100%;
-        text-align: right;
         padding: 10px;
-        border: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    table th {
-        background-color: #f9f9f9;
-        font-weight: bold;
+        font-size: 14px;
         text-align: center;
     }
 
-    table tr {
-        margin-bottom: 10px;
-        display: block;
+    table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    table td {
+        border: 1px solid #ddd;
+    }
+
+    table {
         border: 1px solid #ddd;
         border-radius: 10px;
         overflow: hidden;
     }
+}
 
-    table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: inline-block;
-        width: 50%;
-        color: #555;
-    }
 
     table td {
         text-align: left;
