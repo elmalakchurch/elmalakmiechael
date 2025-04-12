@@ -191,25 +191,26 @@ button:active {
 
 /* تحسين الجداول */
 table {
-    width: 90%;
-    margin: 25px auto;
+    width: 100%;
     border-collapse: collapse;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-th, td {
-    border: 1px solid #D4A017;
-    padding: 10px;
-    font-size: 18px;
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
-th {
-    background: #D4A017;
-    color: white;
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
-td {
-    background: #f9f9f9;
+table caption {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 /* تحسين الروابط */
