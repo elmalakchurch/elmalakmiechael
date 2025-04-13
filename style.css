@@ -405,32 +405,28 @@ ul li {
         padding: 8px 15px; /* تقليل الحشوات */
         margin-top: 10px; /* إضافة مسافة بين النصوص */
     }
-
-    /* تحسين الجداول على الهواتف */
     table {
-        width: 100%;
+        width: 100%; /* يجعل الجدول يتناسب مع عرض الشاشة */
         border-collapse: collapse;
         margin-bottom: 20px;
+        border: 1px solid #ddd; /* نفس لون الحدود */
+        border-radius: 10px; /* نفس الزوايا المستديرة */
+        overflow: hidden;
     }
 
     table th, table td {
-        padding: 10px;
-        font-size: 14px;
-        text-align: center;
+        padding: 10px; /* نفس الحشوات */
+        font-size: 14px; /* نفس حجم النص */
+        text-align: center; /* نفس التوسيط */
     }
 
     table th {
-        background-color: #f2f2f2;
+        background-color: #D4A017; /* نفس لون رأس الجدول */
         font-weight: bold;
+        color: white;
     }
 
     table td {
-        border: 1px solid #ddd;
-    }
-
-    table {
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        overflow: hidden;
+        border: 1px solid #ddd; /* نفس لون حدود الخلايا */
     }
 }
