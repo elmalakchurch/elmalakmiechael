@@ -17,6 +17,8 @@ header {
     color: white;
     border-radius: 0 0 13px 13px;
     position: relative;
+    height: 580px;
+    margin: 0;
     text-align: center;
 }
 
@@ -24,10 +26,14 @@ header {
 .church-logo {
     max-width: 100%;
     height: auto;
-    width: 200px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     border: 6px solid white;
-    margin: 20px auto;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
 }
 
 /* تحسين النصوص داخل الهيدر */
@@ -35,18 +41,26 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     margin: 10px 0;
 }
 
 .priest-container {
-    font-size: 1rem;
+    font-size: 24px;
     font-weight: bold;
     background: rgba(255, 255, 255, 0.5);
     color: black;
     padding: 10px 20px;
     border-radius: 15px;
-    display: inline-block;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 /* تحسين الأقسام */
@@ -117,6 +131,64 @@ section {
     color: #FFD700;
 }
 
+/* تحسين الأزرار */
+button {
+    background: linear-gradient(135deg, #FFD700, #FFA500); /* تدرج لوني */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 12px; /* زوايا مستديرة */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px); /* تحريك الزر للأعلى عند التمرير */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+button:active {
+    transform: translateY(2px); /* تحريك الزر للأسفل عند الضغط */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* تقليل الظل */
+}
+
+/* تحسين الأزرار في الأعلى */
+#top-buttons {
+    display: grid; /* استخدام Grid لتوزيع الأزرار */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* توزيع الأزرار في أعمدة */
+    gap: 10px; /* مسافة بين الأزرار */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#top-buttons button {
+    background-color: #D4A017; /* لون خلفية الزر */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    padding: 20px; /* حشوات داخلية */
+    font-size: 1rem; /* حجم النص */
+    border-radius: 10px; /* زوايا مستديرة */
+    cursor: pointer; /* مؤشر الفأرة */
+    text-align: center; /* توسيط النصوص داخل الزر */
+    transition: all 0.3s ease; /* تأثير عند التمرير */
+    height: 100px; /* جعل الأزرار مربعة */
+}
+
+#top-buttons button:hover {
+    background-color: #E6B800; /* لون عند التمرير */
+    transform: translateY(-2px); /* تحريك الزر للأعلى */
+}
+
+#top-buttons button:active {
+    background-color: #C69700; /* لون عند الضغط */
+    transform: scale(0.97); /* تصغير الزر قليلاً */
+}
+
 /* تحسين الجداول */
 table {
     width: 100%;
@@ -124,60 +196,241 @@ table {
     text-align: center;
     font-family: Arial, sans-serif;
     margin-bottom: 20px;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    background-color: #f9f9f9; /* لون خلفية الجدول */
+    border: 2px solid #D4A017; /* لون حدود الجدول */
 }
 
 table th {
-    background-color: #f2f2f2;
+    background-color: #D4A017; /* لون خلفية رأس الجدول */
+    color: white; /* لون النص في رأس الجدول */
     font-weight: bold;
+    padding: 10px;
 }
 
 table td {
+    background-color: #fff; /* لون خلفية الخلايا */
+    color: #333; /* لون النص داخل الخلايا */
+    border: 1px solid #ddd; /* لون حدود الخلايا */
+    padding: 8px;
+}
+
+table caption {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* تحسين الروابط */
+a {
+    color: #D4A017;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* تحسين الإطارات */
+iframe {
+    width: 100%; /* جعل العرض يتناسب مع عرض الحاوية */
+    max-width: 600px; /* الحد الأقصى للعرض */
+    height: auto; /* ضبط الارتفاع تلقائيًا */
+    aspect-ratio: 16 / 9; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 10px; /* زوايا مستديرة */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+    border: none; /* إزالة الحدود */
+}
+
+/* تحسين الفيديوهات */
+#video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#live-video {
+    margin-bottom: 20px;
+    width: 100%; /* جعل الفيديو يأخذ عرض الحاوية */
+    max-width: 600px; /* الحد الأقصى للعرض */
+}
+
+#latest-videos {
+    width: 100%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#latest-videos h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.video {
+    margin-bottom: 20px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video p {
     font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* تحسين القوائم */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
 }
 
 /* تحسين الصور */
 .church-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* تجعل الصورة تتناسب مع عرض الشاشة */
+    height: auto; /* تحافظ على نسبة العرض إلى الارتفاع */
+    display: block; /* تجعل الصورة تظهر كعنصر بلوك */
+    margin: 20px auto; /* تضيف مسافة حول الصورة وتوسّطها */
+    border-radius: 10px; /* تضيف زوايا مستديرة للصورة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* تضيف ظلًا خفيفًا للصورة */
 }
 
 /* تحسين الصورة على الشاشات الصغيرة */
 @media (max-width: 768px) {
-    .church-logo {
-        width: 150px;
-    }
-
-    .church-name {
-        font-size: 1.2rem;
-    }
-
-    .priest-container {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-    }
-
     .church-image {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    table th, table td {
-        font-size: 12px;
-        padding: 6px;
+        width: 90%; /* تجعل الصورة أصغر قليلاً على الهواتف */
+        margin: 10px auto; /* تقليل المسافة حول الصورة */
     }
 }
 
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+    header {
+        min-height: 450px;
+        padding-bottom: 80px;
+    }
+
+    .church-logo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .church-name {
+        font-size: 1.4rem;
+    }
+
     .priest-container {
-        font-size: 0.9rem;
-        padding: 8px 15px;
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    #side-menu {
+        width: 200px; /* تصغير القائمة على الهواتف */
+    }
+
+    #side-menu ul li a {
+        font-size: 16px; /* تصغير حجم النص */
+    }
+
+    #top-buttons {
+        grid-template-columns: repeat(2, 1fr); /* عرض الأزرار في عمودين على الهواتف */
+    }
+
+    #top-buttons button {
+        font-size: 0.9rem; /* تصغير حجم النص */
+        padding: 15px; /* تقليل الحشوات */
+        height: auto; /* السماح بارتفاع تلقائي */
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 16px;
+    }
+
+    iframe {
+        width: 100%; /* جعل الفيديو يأخذ عرض الشاشة */
+        height: auto; /* ضبط الارتفاع تلقائيًا */
+        aspect-ratio: 16 / 9; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+
+    #video-container {
+        padding: 5px;
+    }
+
+    #live-video {
+        margin-bottom: 15px;
+    }
+
+    .video iframe {
+        height: 180px;
+    }
+
+    /* تحسين الهيدر على الهواتف */
+    header {
+        height: auto; /* السماح بارتفاع تلقائي */
+        padding-bottom: 20px; /* تقليل الحشوات السفلية */
+    }
+
+    .church-logo {
+        width: 150px; /* تصغير حجم الشعار */
+        height: 150px;
+        top: 10px; /* تقليل المسافة من الأعلى */
+    }
+
+    .church-name {
+        font-size: 1.2rem; /* تصغير حجم النص */
+        top: 180px; /* تعديل الموضع */
+        line-height: 1.5; /* تحسين المسافة بين الأسطر */
+        padding: 0 10px; /* إضافة حشوات جانبية */
+    }
+
+    .priest-container {
+        font-size: 0.9rem; /* تصغير حجم النص */
+        padding: 8px 15px; /* تقليل الحشوات */
+        margin-top: 10px; /* إضافة مسافة بين النصوص */
+    }
+
+    /* تحسين الجداول على الهواتف */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    table td {
+        border: 1px solid #ddd;
+    }
+
+    table {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
     }
 }
