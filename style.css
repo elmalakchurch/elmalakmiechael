@@ -202,9 +202,10 @@ table {
 
 table th {
     background-color: #D4A017; /* لون خلفية رأس الجدول */
-    color: white; /* لون النص في رأس الجدول */
+    color: black; /* لون النص في رأس الجدول */
     font-weight: bold;
     padding: 10px;
+    text-align: center;
 }
 
 table td {
